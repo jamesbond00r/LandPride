@@ -6,36 +6,89 @@ var API = "https://www.landpride.com/applications/api/lp/products?key=GIDJBPweD1
 
 export default class ApiCall extends React.Component{
     state = {
-   product_name: [],
-   product_url: [],
-   model_numbers: [],
-   description: [],
-   product_image: [],
+   one: [],
+   two: [],
+   three: [],
+   four: [],
+   five: [],
+   six: [],
+   seven: [],
+   eight: [],
+   nine: [],
+   
 }
 
 
 async componentDidMount() {
    await axios.get(API)
       .then(res => {
-        const Data = res.data.[0]
-       
-        
-      console.log(Data)
-        this.setState({ product_name:Data.product_name, product_url:Data.product_url,model_numbers:Data.model_numbers,description:Data.description,product_image:Data.product_image });
-     
+          
+        const Data = res.data
+         
+      
+        this.setState({ one: Data[0] , two: Data[1], three: Data[2], three: Data[2], four: Data[3], five: Data[4],six: Data[5],seven: Data[6],eight: Data[7],nine: Data[8],  });
+      
       })
   }
+
+    product_name
+    product_url
+    model_numbers
+    description
+    product_image
+
 
 
 
 render(){
     return (
         <ul>
-        <li>{this.state.product_name}</li>
-         <li>{this.state.product_url}</li>
-          <li>{this.state.model_numbers}</li>
-           <li>{this.state.description}</li>
-            <img src={this.state.product_image} alt="product image" />
+        {Object.values(this.state.one).map((keyName, i) =>(
+            <li key={i}>
+            {keyName}
+            </li>
+        ))}
+        {Object.values(this.state.two).map((keyName, i) =>(
+            <li key={i}>
+            {keyName}
+            </li>
+        ))}
+        {Object.values(this.state.three).map((keyName, i) =>(
+            <li key={i}>
+            {keyName}
+            </li>
+             ))}
+            {Object.values(this.state.four).map((keyName, i) =>(
+            <li key={i}>
+            {keyName}
+            </li>
+             ))}
+            {Object.values(this.state.five).map((keyName, i) =>(
+            <li key={i}>
+            {keyName}
+            </li>
+             ))}
+            {Object.values(this.state.six).map((keyName, i) =>(
+            <li key={i}>
+            {keyName}
+            </li>
+             ))}
+            {Object.values(this.state.seven).map((keyName, i) =>(
+            <li key={i}>
+            {keyName}
+            </li>
+             ))}
+            {Object.values(this.state.eight).map((keyName, i) =>(
+            <li key={i}>
+            {keyName}
+            </li>
+             ))}{Object.values(this.state.nine).map((keyName, i) =>(
+            <li key={i}>
+            {keyName}
+            </li>
+        ))}
+        
+        
         </ul>
         )
     }
