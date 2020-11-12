@@ -1,0 +1,11 @@
+.smallPic{
+    width:350px;
+    height: auto;
+}
+
+.floatL{
+    float:left;
+}
+.floatR{
+    float:right;
+}
