@@ -20,14 +20,7 @@ async componentDidMount() {
       .then(res => {
           
         const Data = res.data
-        const newData = [ ]
-        
-        Data.forEach(Data => { for (let p in Data) newData.push(p, Data[p])  });
-        
         this.setState({ Data:  Data  });
-       
-       console.log(this.state.Data)
-       
       })
   }
 
