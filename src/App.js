@@ -24,16 +24,13 @@ async componentDidMount() {
   }
   
 render(){
-  return (
-    
-    <div>
-    
-    <Cards Data={this.state.Data} />
-    
-    </div>
-    
   
-  );
+    
+    if (this.state.loading) return <div> <Loader /> </div>;
+    
+  return <div><Cards Data={this.state.Data} /> </div>
+    
+ 
 };
 }
 
