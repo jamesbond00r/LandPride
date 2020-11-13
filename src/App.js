@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Cards from "./components/ApiCall.js"
+import Cards from "./components/Card.js"
 import Loader from './components/Loader';
 import axios from 'axios';
 
