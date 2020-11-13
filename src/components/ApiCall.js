@@ -41,7 +41,12 @@ render(){
         {this.state.Data.map((data, key) => {
           return (
             <div key={key}>
-              {data.product_url }
+              {data.product_name }
+            <a href= { data.product_url }>Link</a>
+             { data.model_numbers}
+             { data.description }
+              <img src={ data.product_image } alt={data.product_name } />
+             
             </div>
           );
         })}
@@ -50,3 +55,8 @@ render(){
   );
 };
 }
+
+
+
+    
+    
