@@ -1,14 +1,39 @@
-import React from 'react';
-import ApiCall from "./components/ApiCall.js"
+import * as React from 'react';
+import Cards from "./components/ApiCall.js"
+import Loader from './components/Loader';
+import axios from 'axios';
 
 
-function App() {
-  return (
-    <div>
-    
-    <ApiCall />
-    </div>
-  );
+var API = "https://www.landpride.com/applications/api/lp/products?key=GIDJBPweD1NHIH5a&products=dirtworking_rearBlades"
+
+export default class App extends React.Component{
+  
+    state = {
+   Data: [],
+   loading:true,
 }
 
-export default App;
+
+async componentDidMount() {
+   await axios.get(API)
+      .then(res => {
+        const Data = res.data
+        this.setState({ Data:  Data  });
+        this.setState({loading:false})
+      })
+  }
+  
+render(){
+  return (
+    
+    <div>
+    
+    <Cards Data={this.state.Data} />
+    
+    </div>
+    
+  
+  );
+};
+}
+

@@ -11,24 +11,16 @@ import './APiCall.css'
 
 var API = "https://www.landpride.com/applications/api/lp/products?key=GIDJBPweD1NHIH5a&products=dirtworking_rearBlades"
 
-export default class ApiCall extends React.Component{
-    state = {
-   Data: [],
-}
-
-
-async componentDidMount() {
-   await axios.get(API)
-      .then(res => {
-          
-        const Data = res.data
-        this.setState({ Data:  Data  });
-      })
-  }
-
+export default class Cards extends React.Component{
+   constructor(props) {
+    super(props);
+   }
 
 render(){
     return (
+        
+        
+        
         <div>
         <header id="content-header" className="content-header">             <h1 class="title" id="page-title"> Dirtworking </h1>
                         <div className="tabs"></div>
@@ -42,7 +34,7 @@ render(){
       <div className="view-content">
       
       {/*Map over data in state return data and key */}
-        {this.state.Data.map((data, key) => {
+        {this.props.Data.map((data, key) => {
           return (
             <div className="views-row-odd views-row-first product-list-display contextual-edit-region" key={uid(key)} >
             
