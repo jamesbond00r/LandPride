@@ -93,15 +93,17 @@ return (
  <div className="views-row-odd views-row-first product-list-display contextual-edit-region" key={uid(key)} >
 {/* We use UID in the key so React has a unique key to be used for rendering arrays */}
 
-<h2 classNameName="product-series-name"><a href={ data.product_url }>{data.product_name }</a> </h2>
-<div classNameName="list-thumbnail"> <a href={ data.product_url }> <img typeOf="foaf:Image" width="375" height="375" src={ data.product_image } alt={data.product_name } /> </a></div>
-<div classNameName="item-wrapper"> <div classNameName="horsepower-teaser"> { data.model_numbers}</div>
-<div classNameName="product-summary">
+<h2 className="product-series-name"><a href={ data.product_url }>{data.product_name }</a> </h2>
+<div className="list-thumbnail"> <a href={ data.product_url }> <img typeOf="foaf:Image" width="375" height="375" src={ data.product_image } alt={data.product_name } /> </a></div>
+
+
+<div className="item-wrapper"> <div className="horsepower-teaser"> { data.model_numbers}</div>
+<div className="product-summary">
 { data.description }
 </div>
-</div>
-<a href= { data.product_url }> <Button variant="primary"> Read More </Button></a>
-</div>
+
+<a className="btn btn-primary btn-large" href= { data.product_url } >  Read More </a>
+</div></div>
 );
 })}
 
