@@ -50,7 +50,7 @@ render(){
 <div className="block-inner">
 <div className="content">
 <div className="product-landing-content container contextual-edit-region">
-<h1 className="product-landing-header">Dirtworking</h1>
+<h1 className="product-landing-header">dirtworking_grapples</h1>
 </div>
 </div>
 </div>
