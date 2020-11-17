@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Spinner from 'react-bootstrap/Spinner'
-
+{/*Import Spinner for a loader */}
 
 class Loader extends Component {
   render() {

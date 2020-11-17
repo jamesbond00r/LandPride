@@ -1,11 +1,6 @@
 import * as React from 'react';
-import axios from 'axios';
 import {uid} from 'react-uid';
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
-import './Card.css'
-
-
+{/*Uid  gives us unique keys for react */}
 
 
 
