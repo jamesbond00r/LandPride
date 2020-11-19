@@ -5,6 +5,7 @@ import axios from 'axios';
 import { Route, Link, BrowserRouter as Router, Switch,  } from 'react-router-dom'
 import Routes from "./containers/Routes";
 import store from './stores';
+import { Provider } from 'react-redux';
 {/*State is in parent component so it can pass down different state to children */}
 
 
@@ -49,7 +50,7 @@ render(){
     
     if (this.state.loading) return <div> <Loader /> </div>;
     
-  return <div> <Cards Data={this.state.Data} Title={this.state.Title} /> </div>
+  return <Provider store={store}> <div> <Cards  /> </div> </Provider>
     
  
 };
