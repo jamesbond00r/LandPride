@@ -4,7 +4,7 @@ import Loader from './components/Loader';
 import axios from 'axios';
 import { Route, Link, BrowserRouter as Router, Switch,  } from 'react-router-dom'
 import Routes from "./containers/Routes";
-
+import store from './stores';
 {/*State is in parent component so it can pass down different state to children */}
 
 
