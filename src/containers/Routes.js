@@ -23,6 +23,7 @@ export default function Routes() {
 		<Route>
 			<NotFound />
 		</Route>
+		
 		</Switch>
 		
  
